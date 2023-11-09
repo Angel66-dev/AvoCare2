@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.screen.portrait" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AvoCare"
+        tools:targetApi="31">
+        <activity
+            android:name=".plagas.trips"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".plagas.mosquitablanca"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".huerto.addhuerto.plagas.plagascuarentenarias"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alertas.alerta"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pronostico.pronostico"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".planeacion.planeacion"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".huerto.addhuerto.AddHuerto"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".huerto.addhuerto.detallenutrimental.detallenutrimental"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".huerto.addhuerto.detallehuerto.DetalleHuerto"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".huerto.saludhuerto.saludhuerto"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".huerto.MisHuertos"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.register.register"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.login.login"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

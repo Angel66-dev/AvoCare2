@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".huerto.saludhuerto.saludhuerto"
+    android:background="@drawable/fondo">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/saludhuertoToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/saludhuertoBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/white_rect_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saludhuertoToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/saludhuertoBoxTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/saludhuertoBoxLayout"
+            >
+
+            <TextView
+                android:id="@+id/saludhuertoTvSalud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gris"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="@string/saludhuertoTvSalud"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/saludhuertoTvNomHuerto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/saludhuertoTvNomHuerto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:text="@string/saludhuertoTvNomHuerto"
+                android:textAlignment="center"
+                android:textColor="@color/gris"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/saludhuertoTvNomHuerto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/saludhuertoBoxForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saludhuertoBoxTitle"
+            >
+
+            <Button
+                android:id="@+id/saludhuertoBtnAlertEnfer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/green"
+                android:textSize="16dp"
+                android:text="@string/saludhuertoBtnAlertEnfer"
+                android:layout_marginBottom="10dp"
+                app:cornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <Button
+                android:id="@+id/saludhuertoBtnAlertPlagas"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/green"
+                android:textSize="16dp"
+                android:text="@string/saludhuertoBtnAlertPlagas"
+                android:layout_marginBottom="10dp"
+                app:cornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/saludhuertoBtnAlertEnfer"
+                />
+
+            <Button
+                android:id="@+id/saludhuertoBtnPron"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/green"
+                android:textSize="16dp"
+                android:text="@string/saludhuertoBtnPron"
+                android:layout_marginBottom="10dp"
+                app:cornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/saludhuertoBtnAlertPlagas"
+                />
+
+            <Button
+                android:id="@+id/saludhuertoBtnPlan"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/green"
+                android:textSize="16dp"
+                android:text="@string/saludhuertoBtnPlan"
+                android:layout_marginBottom="10dp"
+                app:cornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/saludhuertoBtnPron"
+                />
+
+            <Button
+                android:id="@+id/saludhuertoBtnImagenes"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/green"
+                android:textSize="16dp"
+                android:text="@string/saludhuertoBtnImagenes"
+                android:layout_marginBottom="10dp"
+                app:cornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/saludhuertoBtnPlan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
