@@ -1,7 +1,6 @@
-package com.l20290957.avocare.services.avocadoApi.models.Huertos;
+package com.l20290957.avocare.services.avocadoApi.models.Huertos.responses;
 
-public class Huertos {
-    private String id;
+public class CreateHuertos {
     private String idUsuario;
     private String nombre;
     private double latitud;
@@ -12,10 +11,6 @@ public class Huertos {
     private String organico;
     private String etapaFenologica;
     private String tipoRiego;
-    private long v;
-
-    public String getID() { return id; }
-    public void setID(String value) { this.id = value; }
 
     public String getIDUsuario() { return idUsuario; }
     public void setIDUsuario(String value) { this.idUsuario = value; }
@@ -46,7 +41,4 @@ public class Huertos {
 
     public String getTipoRiego() { return tipoRiego; }
     public void setTipoRiego(String value) { this.tipoRiego = value; }
-
-    public long getV() { return v; }
-    public void setV(long value) { this.v = value; }
 }
