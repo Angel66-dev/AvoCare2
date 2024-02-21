@@ -1,6 +1,6 @@
-package com.l20290957.avocare.services.avocadoApi.models;
+package com.l20290957.avocare.services.avocadoApi.models.AlertaPlaga;
 
-public class AlertaPlaga {
+public class AlertaPlagaRepository {
     private String idPlagas;
     private String mensaje;
     private String descripcion;

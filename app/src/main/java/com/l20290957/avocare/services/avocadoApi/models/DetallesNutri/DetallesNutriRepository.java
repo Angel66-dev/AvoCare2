@@ -1,8 +1,8 @@
-package com.l20290957.avocare.services.avocadoApi.models;
+package com.l20290957.avocare.services.avocadoApi.models.DetallesNutri;
 
 import java.time.OffsetDateTime;
 
-public class DetallesNutri {
+public class DetallesNutriRepository {
     private String id;
     private String idNutrientes;
     private String idHuerto;

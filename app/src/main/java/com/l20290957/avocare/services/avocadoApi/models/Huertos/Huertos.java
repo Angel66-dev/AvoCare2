@@ -1,4 +1,4 @@
-package com.l20290957.avocare.services.avocadoApi.models;
+package com.l20290957.avocare.services.avocadoApi.models.Huertos;
 
 public class Huertos {
     private String idUsuario;
