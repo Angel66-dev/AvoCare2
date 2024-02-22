@@ -1,16 +1,12 @@
 package com.l20290957.avocare.services.avocadoApi.models.AlertaPlaga;
 
 public class AlertaPlaga {
-    private String idPlagas;
-    private String mensaje;
-    private String descripcion;
+    private String id;
+    private long v;
 
-    public String getIDPlagas() { return idPlagas; }
-    public void setIDPlagas(String value) { this.idPlagas = value; }
+    public String getID() { return id; }
+    public void setID(String value) { this.id = value; }
 
-    public String getMensaje() { return mensaje; }
-    public void setMensaje(String value) { this.mensaje = value; }
-
-    public String getDescripcion() { return descripcion; }
-    public void setDescripcion(String value) { this.descripcion = value; }
+    public long getV() { return v; }
+    public void setV(long value) { this.v = value; }
 }

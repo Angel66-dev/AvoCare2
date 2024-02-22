@@ -2,7 +2,7 @@ package com.l20290957.avocare.services.avocadoApi.models.Huertos.responses;
 
 import com.l20290957.avocare.services.avocadoApi.models.Huertos.Huertos;
 
-public class HuertosResponse {
+public class HuertosIdResponse {
     private Huertos huerto;
     private String token;
 

@@ -1,8 +1,12 @@
 package com.l20290957.avocare.services.avocadoApi.models.Enfermedades;
 
 public class Enfermedades {
-    private String idEnfermedades;
+    private String id;
+    private long v;
 
-    public String getIDEnfermedades() { return idEnfermedades; }
-    public void setIDEnfermedades(String value) { this.idEnfermedades = value; }
+    public String getID() { return id; }
+    public void setID(String value) { this.id = value; }
+
+    public long getV() { return v; }
+    public void setV(long value) { this.v = value; }
 }
