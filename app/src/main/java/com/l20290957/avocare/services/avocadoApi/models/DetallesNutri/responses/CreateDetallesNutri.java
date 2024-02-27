@@ -1,24 +1,22 @@
 package com.l20290957.avocare.services.avocadoApi.models.DetallesNutri.responses;
 
+import java.time.OffsetDateTime;
+
 public class CreateDetallesNutri {
+    private String idNutrientes;
+    private String idHuerto;
     private String idInfonutri;
-    private String fosforo;
-    private String potacio;
-    private String magnecio;
-    private String calcio;
+    private OffsetDateTime fecha;
+
+    public String getIDNutrientes() { return idNutrientes; }
+    public void setIDNutrientes(String value) { this.idNutrientes = value; }
+
+    public String getIDHuerto() { return idHuerto; }
+    public void setIDHuerto(String value) { this.idHuerto = value; }
 
     public String getIDInfonutri() { return idInfonutri; }
     public void setIDInfonutri(String value) { this.idInfonutri = value; }
 
-    public String getFosforo() { return fosforo; }
-    public void setFosforo(String value) { this.fosforo = value; }
-
-    public String getPotacio() { return potacio; }
-    public void setPotacio(String value) { this.potacio = value; }
-
-    public String getMagnecio() { return magnecio; }
-    public void setMagnecio(String value) { this.magnecio = value; }
-
-    public String getCalcio() { return calcio; }
-    public void setCalcio(String value) { this.calcio = value; }
+    public OffsetDateTime getFecha() { return fecha; }
+    public void setFecha(OffsetDateTime value) { this.fecha = value; }
 }
