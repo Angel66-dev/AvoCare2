@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AvocadoCareApiClient {
 
-    private static final String BASE_URL = "http://localhost:3000/api/v1/";
+    private static final String BASE_URL = "http://172.28.192.1:3000/api/v1/";
     private static Retrofit _instance;
 
 

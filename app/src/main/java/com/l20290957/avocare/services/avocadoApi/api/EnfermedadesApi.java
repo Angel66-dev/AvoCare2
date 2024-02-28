@@ -4,7 +4,6 @@ import com.l20290957.avocare.services.avocadoApi.models.Enfermedades.Enfermedade
 import com.l20290957.avocare.services.avocadoApi.models.Enfermedades.responses.CreateEnfermedad;
 import com.l20290957.avocare.services.avocadoApi.models.Enfermedades.responses.EnfermedadesIdResponse;
 import com.l20290957.avocare.services.avocadoApi.models.Enfermedades.responses.EnfermedadesListResponse;
-import com.l20290957.avocare.services.avocadoApi.models.auth.User;
 
 import io.reactivex.Observable;
 import retrofit2.http.Body;
@@ -30,7 +29,7 @@ public interface EnfermedadesApi {
     @PATCH("enfermedades/{id}")
     Observable<EnfermedadesIdResponse> editEnfermedad (@Header("Authorization")String token,
                                                        @Path("id")String idEnfermedad,
-                                                       @Body User editEnfermedad);
+                                                       @Body Enfermedades editEnfermedad);
 
     @DELETE("enfermedades/{id}")
     Observable<EnfermedadesIdResponse> deleteEnfermedad (@Header("Authorization")String token,

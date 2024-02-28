@@ -15,7 +15,7 @@ import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
-public interface authApi {
+public interface AuthApi {
 
     @GET("auth")
     Observable<UserListResponse> getUserList(@Header("Authorization")String token);
