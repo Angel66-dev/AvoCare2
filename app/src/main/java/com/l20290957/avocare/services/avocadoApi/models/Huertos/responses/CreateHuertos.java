@@ -1,44 +1,44 @@
 package com.l20290957.avocare.services.avocadoApi.models.Huertos.responses;
 
 public class CreateHuertos {
-    private String idUsuario;
-    private String nombre;
-    private double latitud;
-    private double longitud;
-    private String tipoSuelo;
-    private String variedad;
-    private String mercadoOBJ;
-    private String organico;
-    private String etapaFenologica;
-    private String tipoRiego;
+    private String id_Usuario;
+    private String Nombre;
+    private double Latitud;
+    private double Longitud;
+    private String Tipo_Suelo;
+    private String Variedad;
+    private String MercadoOBJ;
+    private String Organico;
+    private String EtapaFenologica;
+    private String Tipo_Riego;
 
-    public String getIDUsuario() { return idUsuario; }
-    public void setIDUsuario(String value) { this.idUsuario = value; }
+    public String getIDUsuario() { return id_Usuario; }
+    public void setIDUsuario(String value) { this.id_Usuario = value; }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String value) { this.nombre = value; }
+    public String getNombre() { return Nombre; }
+    public void setNombre(String value) { this.Nombre = value; }
 
-    public double getLatitud() { return latitud; }
-    public void setLatitud(double value) { this.latitud = value; }
+    public double getLatitud(double latitudDouble) { return Latitud; }
+    public void setLatitud(double value) { this.Latitud = value; }
 
-    public double getLongitud() { return longitud; }
-    public void setLongitud(double value) { this.longitud = value; }
+    public double getLongitud(double longitudDouble) { return Longitud; }
+    public void setLongitud(double value) { this.Longitud = value; }
 
-    public String getTipoSuelo() { return tipoSuelo; }
-    public void setTipoSuelo(String value) { this.tipoSuelo = value; }
+    public String getTipoSuelo(String tipoSueloValue) { return Tipo_Suelo; }
+    public void setTipoSuelo(String value) { this.Tipo_Suelo = value; }
 
-    public String getVariedad() { return variedad; }
-    public void setVariedad(String value) { this.variedad = value; }
+    public String getVariedad(String vaiedadValue) { return Variedad; }
+    public void setVariedad(String value) { this.Variedad = value; }
 
-    public String getMercadoOBJ() { return mercadoOBJ; }
-    public void setMercadoOBJ(String value) { this.mercadoOBJ = value; }
+    public String getMercadoOBJ(String mercadoOBJValue) { return MercadoOBJ; }
+    public void setMercadoOBJ(String value) { this.MercadoOBJ = value; }
 
-    public String getOrganico() { return organico; }
-    public void setOrganico(String value) { this.organico = value; }
+    public String getOrganico(String organicoValue) { return Organico; }
+    public void setOrganico(String value) { this.Organico = value; }
 
-    public String getEtapaFenologica() { return etapaFenologica; }
-    public void setEtapaFenologica(String value) { this.etapaFenologica = value; }
+    public String getEtapaFenologica(String etapaValue) { return EtapaFenologica; }
+    public void setEtapaFenologica(String value) { this.EtapaFenologica = value; }
 
-    public String getTipoRiego() { return tipoRiego; }
-    public void setTipoRiego(String value) { this.tipoRiego = value; }
+    public String getTipoRiego(String tipoRiegoValue) { return Tipo_Riego; }
+    public void setTipoRiego(String value) { this.Tipo_Riego = value; }
 }

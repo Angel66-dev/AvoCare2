@@ -80,4 +80,10 @@
     <string name="mishuertosAlertDialogMessage">Está a punto de abandonar esta pantalla Seleccione una opción</string>
     <string name="mishuertosAlertDialogBackNegativeTitle">Cerrar Sesión</string>
     <string name="mishuertosAlertDialogBackPositiveTitle">Cerrar App</string>
+    <string name="addhuertoEtName">Nombre del huerto</string>
+    <string name="addhuertoBtnTipoSuelo">Tipo de Suelo</string>
+    <string name="addhuertoBtnTipoRiego">Tipo de Riego</string>
+    <string name="detallehuertoBtnOrganico">Organico</string>
+    <string name="addhuertoBtnLatitud">Latitud</string>
+    <string name="addhuertoBtnLongitud">Longitud</string>
 </resources>

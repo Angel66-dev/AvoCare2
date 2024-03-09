@@ -1,16 +1,24 @@
 package com.l20290957.avocare.services.avocadoApi.models.auth.responses;
 
 public class CreateUser {
-    private String correo;
-    private String contra;
-    private String nombre;
+    private static CreateUser _instance = null;
+    private String Correo;
+    private String Contra;
+    private String Nombre;
 
-    public String getCorreo() { return correo; }
-    public void setCorreo(String value) { this.correo = value; }
+    public static CreateUser getInstance() {
+        if ( _instance == null)
+            _instance = new CreateUser();
 
-    public String getContra() { return contra; }
-    public void setContra(String value) { this.contra = value; }
+        return _instance;
+    }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String value) { this.nombre = value; }
+    public String getCorreo() { return Correo; }
+    public void setCorreo(String value) { this.Correo = value; }
+
+    public String getContra() { return Contra; }
+    public void setContra(String value) { this.Contra = value; }
+
+    public String getNombre() { return Nombre; }
+    public void setNombre(String value) { this.Nombre = value; }
 }

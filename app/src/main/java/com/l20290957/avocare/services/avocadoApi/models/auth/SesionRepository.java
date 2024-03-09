@@ -16,5 +16,5 @@ public class SesionRepository {
     public void setUsuarioLogeado(User value) { this.UsuarioLogeado = value; }
 
     public String getToken() { return token; }
-    public void setToken(String value) { this.token = value; }
+    public void setToken(String value) { this.token = "Bearer " + value; }
 }

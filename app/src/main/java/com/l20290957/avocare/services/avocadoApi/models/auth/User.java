@@ -1,21 +1,28 @@
 package com.l20290957.avocare.services.avocadoApi.models.auth;
 
 public class User {
+    private static User _instance = null;
 
-    private String id;
-    private String nombre;
-    private String correo;
+    private String _id;
+    private String Nombre;
+    private String Correo;
     private boolean isActive;
     private long v;
+    public static User getInstance() {
+        if ( _instance == null)
+            _instance = new User();
 
-    public String getID() { return id; }
-    public void setID(String value) { this.id = value; }
+        return _instance;
+    }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String value) { this.nombre = value; }
+    public String getID() { return _id; }
+    public void setID(String value) { this._id = value; }
 
-    public String getCorreo() { return correo; }
-    public void setCorreo(String value) { this.correo = value; }
+    public String getNombre() { return Nombre; }
+    public void setNombre(String value) { this.Nombre = value; }
+
+    public String getCorreo() { return Correo; }
+    public void setCorreo(String value) { this.Correo = value; }
 
     public boolean getIsActive() { return isActive; }
     public void setIsActive(boolean value) { this.isActive = value; }

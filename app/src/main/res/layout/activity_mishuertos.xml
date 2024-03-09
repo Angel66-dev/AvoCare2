@@ -23,13 +23,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mishuertosBoxTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="20dp"
         android:background="@drawable/white_rect_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mishuertosToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
         >
 
         <TextView
@@ -45,204 +46,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/mishuertosBoxForm"
+            app:layout_constraintBottom_toTopOf="@id/mishuertosLV"
             />
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/mishuertosBoxForm"
+        <ListView
+            android:id="@+id/mishuertosLV"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginVertical="20dp"
-            android:background="@drawable/green_rect_background"
+            android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/mishuertosTvLayout"
             app:layout_constraintBottom_toBottomOf="parent"
-            >
+            tools:listitem="@layout/huertoitem"
 
-            <TextView
-                android:id="@+id/mishuertosTvNomHuerto"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/mishuertosTvNomHuerto"
-                android:textAlignment="center"
-                android:textColor="@color/green_low"
-                android:textSize="32dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/mishuertosTvUbicacion"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            />
 
-            <TextView
-                android:id="@+id/mishuertosTvUbicacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="8dp"
-                android:layout_marginStart="10dp"
-                android:text="@string/mishuertosTvUbicacion"
-                android:textColor="@color/green_low"
-                android:gravity="start"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/mishuertosBoxTemperatura"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mishuertosTvNomHuerto" />
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mishuertosBoxTemperatura"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginHorizontal="15dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/mishuertosTvUbicacion"
-                app:layout_constraintBottom_toTopOf="@id/mishuertosTvNumAlertas"
-                >
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/mishuertosSivTemperatura"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/termometro"
-                    android:tint="@color/green_low"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/mishuertosSivHumedad"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/mishuertosSivHumedad"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/humedad"
-                    android:tint="@color/green_low"
-                    app:layout_constraintStart_toEndOf="@+id/mishuertosSivTemperatura"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-                <TextView
-                    android:id="@+id/mishuertosTvTemperatura"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mishuertosTvTemperatura"
-                    android:textColor="@color/green_low"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/mishuertosTvCentigrados"
-                    app:layout_constraintTop_toBottomOf="@+id/mishuertosSivTemperatura" />
-
-                <TextView
-                    android:id="@+id/mishuertosTvCentigrados"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mishuertosTvCentigrados"
-                    android:textColor="@color/green_low"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    app:layout_constraintStart_toEndOf="@+id/mishuertosTvTemperatura"
-                    app:layout_constraintEnd_toStartOf="@+id/mishuertosSivHumedad"
-                    app:layout_constraintTop_toBottomOf="@+id/mishuertosSivTemperatura" />
-
-                <TextView
-                    android:id="@+id/mishuertosTvHumedad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mishuertosTvHumedad"
-                    android:textColor="@color/green_low"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@+id/mishuertosSivTemperatura"
-                    app:layout_constraintEnd_toStartOf="@+id/mishuertosTvPorcentaje"
-                    app:layout_constraintTop_toBottomOf="@+id/mishuertosSivHumedad" />
-
-                <TextView
-                    android:id="@+id/mishuertosTvPorcentaje"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/mishuertosTvPorcentaje"
-                    android:textColor="@color/green_low"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mishuertosTvHumedad"
-                    app:layout_constraintTop_toBottomOf="@+id/mishuertosSivHumedad" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/mishuertosTvAlertas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="8dp"
-                android:layout_marginStart="10dp"
-                android:text="@string/mishuertosTvAlertas"
-                android:textColor="@color/green_low"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mishuertosBoxTemperatura"
-                app:layout_constraintBottom_toTopOf="@id/mishuertosTvPronostico"/>
-
-            <TextView
-                android:id="@+id/mishuertosTvNumAlertas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="8dp"
-                android:text="@string/mishuertosTvNumAlertas"
-                android:textColor="@color/green_low"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                app:layout_constraintStart_toEndOf="@+id/mishuertosTvAlertas"
-                app:layout_constraintTop_toBottomOf="@+id/mishuertosBoxTemperatura"
-                app:layout_constraintBottom_toTopOf="@+id/mishuertosTvNumPronosticos" />
-
-            <TextView
-                android:id="@+id/mishuertosTvPronostico"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/mishuertosTvPronostico"
-                android:textColor="@color/green_low"
-                android:gravity="start"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mishuertosTvAlertas"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
-            <TextView
-                android:id="@+id/mishuertosTvNumPronosticos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/mishuertosTvNumPronosticos"
-                android:textColor="@color/green_low"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                app:layout_constraintStart_toEndOf="@+id/mishuertosTvPronostico"
-                app:layout_constraintTop_toBottomOf="@+id/mishuertosTvNumAlertas"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

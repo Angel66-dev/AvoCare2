@@ -27,7 +27,7 @@ public interface HuertosApi {
                                                             @Path("id")String idUsuario);
 
     @POST("nutrientes")
-    Observable<Huertos> createHuertos (@Header("Authorization")String token,
+    Observable<HuertosIdResponse> createHuertos (@Header("Authorization")String token,
                                        @Body CreateHuertos createHuertos);
 
     @PATCH("nutrientes/{id}")

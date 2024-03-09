@@ -77,6 +77,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/addhuertoBoxForm"
             android:layout_width="match_parent"
@@ -88,65 +89,110 @@
             app:layout_constraintTop_toBottomOf="@id/addhuertoBoxTitle"
             >
 
-            <Button
-                android:id="@+id/addhuertoBtnVariedad"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addhuertoEtName"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginVertical="15dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:backgroundTint="@color/green"
-                android:textSize="16dp"
-                android:text="@string/addhuertoBtnVariedad"
-                android:layout_marginBottom="10dp"
-                app:cornerRadius="20dp"
+                android:hint="@string/addhuertoEtName"
+                app:endIconMode="clear_text"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintBottom_toTopOf="@id/addhuertoBtnLongitud"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/addhuertoSivUbicacion"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:layout_marginVertical="15dp"
-                app:srcCompat="@drawable/mapa"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/addhuertoBtnVariedad"
-                />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/addhuertoBtnRiego"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addhuertoBtnLongitud"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginVertical="15dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:backgroundTint="@color/green"
-                android:textSize="16dp"
-                android:text="@string/addhuertoBtnRiego"
-                android:layout_marginBottom="10dp"
-                app:cornerRadius="20dp"
+                android:hint="@string/addhuertoBtnLongitud"
+                app:endIconMode="clear_text"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/addhuertoSivUbicacion"
-                />
+                app:layout_constraintTop_toBottomOf="@id/addhuertoEtName"
+                app:layout_constraintBottom_toTopOf="@id/addhuertoBtnLatitud"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
 
-            <Button
-                android:id="@+id/addhuertoBtnEtapa"
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addhuertoBtnLatitud"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginVertical="15dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:backgroundTint="@color/green"
-                android:textSize="16dp"
-                android:text="@string/addhuertoBtnEtapa"
-                android:layout_marginBottom="10dp"
-                app:cornerRadius="20dp"
+                android:hint="@string/addhuertoBtnLatitud"
+                app:endIconMode="clear_text"
+                android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addhuertoBtnLongitud"
+                app:layout_constraintBottom_toTopOf="@id/addhuertoBtnTipoSuelo"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addhuertoBtnTipoSuelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/addhuertoBtnTipoSuelo"
+                app:endIconMode="clear_text"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addhuertoBtnLatitud"
+                app:layout_constraintBottom_toTopOf="@id/addhuertoBtnTipoRiego"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addhuertoBtnTipoRiego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/addhuertoBtnTipoRiego"
+                app:endIconMode="clear_text"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addhuertoBtnTipoSuelo"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/addhuertoBtnRiego"
-                />
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
