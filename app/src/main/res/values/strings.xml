@@ -18,7 +18,7 @@
     <string name="registerBtnAcceder">Registrar</string>
     <string name="registerTvNoTienesCuenta">¿Ya tienes una cuenta?</string>
     <string name="registerTvCrearCuenta">Iniciar sesión</string>
-    <string name="mishuertosTvTitulo">Mis Huertos</string>
+    <string name="mishuertosTvTitulo">Tlaltec</string>
     <string name="mishuertosTvNomHuerto">Huerto Cerritos</string>
     <string name="mishuertosTvUbicacion">Cd. Guzman, Jal, Mex.</string>
     <string name="mishuertosTvTemperatura">27</string>
@@ -89,4 +89,8 @@
     <string name="loginTvContra">Contraseña</string>
     <string name="loginTvCorreo">Correo</string>
     <string name="mainBtnResgister">Registrate</string>
+    <string name="mainNavHome">Inicio</string>
+    <string name="mainNavCamera">Camara</string>
+    <string name="mainNavDiagnostico">Diagnostico</string>
+    <string name="mishuertosTvHuertos">Huertos</string>
 </resources>

@@ -6,32 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".huerto.MisHuertos">
 
-
+    <TextView
+        android:id="@+id/mishuertosTvLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:textColor="@color/dark2"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/mishuertosTvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mishuertosBoxTitle"
+        />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mishuertosBoxTitle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginVertical="20dp"
+            android:layout_marginVertical="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mishuertosTvLayout"
+            app:layout_constraintBottom_toTopOf="@id/mishuertosBnvNavView"
             >
 
             <TextView
-                android:id="@+id/mishuertosTvLayout"
+                android:id="@+id/mishuertosTvHuertos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:textColor="@color/gris"
-                android:textSize="32dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/dark2"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:text="@string/mishuertosTvTitulo"
+                android:text="@string/mishuertosTvHuertos"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/mishuertosLV"
                 />
@@ -42,14 +55,23 @@
                 android:layout_height="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/mishuertosTvLayout"
+                app:layout_constraintTop_toBottomOf="@id/mishuertosTvHuertos"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:listitem="@layout/huertoitem"
 
                 />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/mishuertosBnvNavView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gris"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/main_nav_menu"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/mishuertosFab"
@@ -58,10 +80,11 @@
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="15dp"
             android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/gris"
+            app:layout_constraintBottom_toTopOf="@id/mishuertosBnvNavView"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/baseline_add_24"
-            tools:ignore="SpeakableTextPresentCheck">
+            >
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 

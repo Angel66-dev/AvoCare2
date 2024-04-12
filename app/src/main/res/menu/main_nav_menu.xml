@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainNavHome"
+        android:icon="@drawable/home"
+        android:title="@string/mainNavHome"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/mainNavCamera"
+        android:icon="@drawable/camera"
+        android:title="@string/mainNavCamera"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/mainNavDiagnostico"
+        android:icon="@drawable/diagnositic"
+        android:title="@string/mainNavDiagnostico"
+        android:enabled="true"
+        />
+
+</menu>
