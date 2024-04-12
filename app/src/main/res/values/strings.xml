@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">AvoCare</string>
-    <string name="mainTvTitulo">Sistema Inteligente para la Gestión Integral de la Salud de los Aguacates</string>
+    <string name="mainTvTitulo">Tecnología hecha para cuidar su cosecha</string>
     <string name="mainBtnLogin">Iniciar sesión</string>
     <string name="mainTvNoTienesCuenta">¿No tienes una cuenta?</string>
     <string name="mainTvCrearCuenta">Crear cuenta</string>
-    <string name="loginTvTitulo">Bienvenidos</string>
-    <string name="loginTilEmailHint">E-mail</string>
-    <string name="loginTilPasswordHint">Contraseña</string>
+    <string name="loginTvTitulo">¡Bienvenido de nuevo!</string>
+    <string name="loginTilEmailHint">Ingresa tu correo electronico</string>
+    <string name="loginTilPasswordHint">Ingresa tu contraseña</string>
     <string name="loginBtnAcceder">Iniciar sesión</string>
     <string name="loginTvNoTienesCuenta">¿No tienes una cuenta?</string>
     <string name="loginTvCrearCuenta">Crear cuenta</string>
-    <string name="registerTvTitulo">Registrate</string>
+    <string name="registerTvTitulo">¡Hola! Registrate para comenzar</string>
     <string name="registerTilUsernameHint">Usuario</string>
     <string name="registerTilEmailHint">E-mail</string>
     <string name="registerTilPasswordHint">Contraseña</string>
@@ -25,8 +25,8 @@
     <string name="mishuertosTvCentigrados">°C</string>
     <string name="mishuertosTvHumedad">30</string>
     <string name="mishuertosTvPorcentaje">%</string>
-    <string name="mishuertosTvAlertas">Alertas actuales:</string>
-    <string name="mishuertosTvPronostico">Alertas pronostico:</string>
+    <string name="mishuertosTvAlertas">Alertas actuales: </string>
+    <string name="mishuertosTvPronostico">Alertas pronostico: </string>
     <string name="mishuertosTvNumAlertas">3</string>
     <string name="mishuertosTvNumPronosticos">3</string>
     <string name="saludhuertoTvSalud">Salud del Huerto</string>
@@ -86,4 +86,7 @@
     <string name="detallehuertoBtnOrganico">Organico</string>
     <string name="addhuertoBtnLatitud">Latitud</string>
     <string name="addhuertoBtnLongitud">Longitud</string>
+    <string name="loginTvContra">Contraseña</string>
+    <string name="loginTvCorreo">Correo</string>
+    <string name="mainBtnResgister">Registrate</string>
 </resources>

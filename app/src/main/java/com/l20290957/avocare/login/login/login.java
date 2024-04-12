@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,11 +45,17 @@ private AuthApi authApi;
         tvCrearCuenta.setOnClickListener(view -> {
             Intent intent = new Intent(this, register.class);
             startActivity(intent);
+            finish();
         });
 
         Button btnLogin = findViewById(R.id.loginBtnAcceder);
         correo = findViewById(R.id.loginTilEmail);
         contra = findViewById(R.id.loginTilPassword);
+
+        ImageView imageView = findViewById(R.id.loginIvBack);
+        imageView.setOnClickListener(view -> {
+            finish();
+        });
 
         /* btnLogin.setOnClickListener(View -> {
             Intent intent = new Intent(this, MisHuertos.class);

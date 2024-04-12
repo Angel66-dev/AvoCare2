@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +47,11 @@ public class register extends AppCompatActivity {
         usuario = findViewById(R.id.registerTilUsername);
 
         authApi = AvocadoCareApiClient.get_instance().create(AuthApi.class);
+
+        ImageView imageView = findViewById(R.id.registerIvBack);
+        imageView.setOnClickListener(view -> {
+            finish();
+        });
 
         btn.setOnClickListener(this::onBtnRegisterClick);
     }

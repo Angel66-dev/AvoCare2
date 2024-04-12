@@ -4,19 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.register.register"
-    android:background="@drawable/fondo">
+    tools:context=".login.register.register">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/registerToolbar"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/registerIvBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/registerTvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
-        android:background="@drawable/white_rect_background"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/gris"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:text="@string/registerTvTitulo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerIvBack"
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,172 +33,181 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="14dp"
-        android:background="@drawable/white_rect_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registerToolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerTvTitle"
+        app:layout_constraintBottom_toTopOf="@id/registerBoxBottom"
         >
 
         <TextView
-            android:id="@+id/registerTvLayout"
+            android:id="@+id/registerTvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
             android:textColor="@color/gris"
-            android:textSize="32dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:text="@string/registerTvTitulo"
+            android:text="@string/loginTvCorreo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/registerBoxUsername"
+            app:layout_constraintBottom_toTopOf="@id/registerTilUsername"
             />
 
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/registerBoxUsername"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerTilUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"
             android:layout_marginHorizontal="20dp"
+            android:hint="@string/registerTilUsernameHint"
+            app:endIconMode="clear_text"
+            android:layout_marginBottom="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/registerTvLayout"
-            app:layout_constraintBottom_toTopOf="@+id/registerBoxEmail"
+            app:layout_constraintTop_toBottomOf="@id/registerTvName"
+            app:layout_constraintBottom_toTopOf="@id/registerTvCorreo"
             >
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/registerTilUsername"
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_person_24"
-                android:drawablePadding="8dp"
-                android:hint="@string/registerTilUsernameHint"
-                app:endIconMode="clear_text"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+                android:inputType="text"
+                />
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/registerTvCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/gris"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/loginTvCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerTilUsername"
+            app:layout_constraintBottom_toTopOf="@id/registerTilEmail"
+            />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/registerBoxEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerTilEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="8dp"
             android:layout_marginHorizontal="20dp"
+            android:hint="@string/registerTilEmailHint"
+            app:endIconMode="clear_text"
+            android:layout_marginBottom="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/registerBoxUsername"
-            app:layout_constraintBottom_toTopOf="@+id/registerBoxPassword"
+            app:layout_constraintTop_toBottomOf="@id/registerTvCorreo"
+            app:layout_constraintBottom_toTopOf="@id/registerTvContra"
             >
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/registerTilEmail"
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_email_24"
-                android:drawablePadding="8dp"
-                android:hint="@string/registerTilEmailHint"
-                app:endIconMode="clear_text"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                >
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/registerTvContra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/gris"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/loginTvCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerTilEmail"
+            app:layout_constraintBottom_toTopOf="@id/registerTilPassword"
+            />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/registerBoxPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerTilPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
             android:layout_marginHorizontal="20dp"
+            android:hint="@string/registerTilPasswordHint"
+            app:endIconMode="password_toggle"
+            android:layout_marginBottom="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/registerBoxEmail"
-            app:layout_constraintBottom_toTopOf="@+id/registerBoxConfirmPassword"
+            app:layout_constraintTop_toBottomOf="@id/registerTvContra"
+            app:layout_constraintBottom_toTopOf="@id/registerTvContra2"
             >
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/registerTilPassword"
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="8dp"
-                android:hint="@string/registerTilPasswordHint"
-                app:endIconMode="password_toggle"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                >
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/registerTvContra2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/gris"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/loginTvCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registerTilPassword"
+            app:layout_constraintBottom_toTopOf="@id/registerTilConfirmPassword"
+            />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/registerBoxConfirmPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerTilConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
             android:layout_marginHorizontal="20dp"
+            android:hint="@string/registerTilConfirmPasswordHint"
+            app:endIconMode="password_toggle"
+            android:layout_marginBottom="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/registerBoxPassword"
-            app:layout_constraintBottom_toTopOf="@id/registerBtnAcceder"
+            app:layout_constraintTop_toBottomOf="@id/registerTvContra2"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/registerTilConfirmPassword"
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="8dp"
-                android:hint="@string/registerTilConfirmPasswordHint"
-                app:endIconMode="password_toggle"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                >
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/registerBoxBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerBoxForm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
         <Button
             android:id="@+id/registerBtnAcceder"
             android:layout_width="match_parent"
@@ -199,17 +217,18 @@
             android:textSize="16dp"
             android:text="@string/registerBtnAcceder"
             android:layout_marginBottom="10dp"
-            app:cornerRadius="20dp"
+            app:cornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/registerBoxConfirmPassword"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/registerTvNoTienesCuenta"
             />
         <TextView
             android:id="@+id/registerTvNoTienesCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:text="@string/registerTvNoTienesCuenta"
             android:layout_marginEnd="8dp"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -225,7 +244,7 @@
             android:layout_height="49dp"
             android:layout_marginTop="10dp"
             android:textStyle="bold"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="@string/registerTvCrearCuenta"
             android:gravity="center"
             android:textColor="#1A237E"
@@ -235,8 +254,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

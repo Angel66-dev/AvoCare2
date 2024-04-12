@@ -4,19 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.login.login"
-    android:background="@drawable/fondo">
+    tools:context=".login.login.login">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/loginToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/white_rect_background"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/loginIvBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/loginTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/gris"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/loginTvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginIvBack"
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,30 +34,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="14dp"
-        android:background="@drawable/white_rect_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginToolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTvTitle"
+        app:layout_constraintBottom_toTopOf="@id/loginBoxBottom"
         >
 
         <TextView
-            android:id="@+id/loginTvLayout"
+            android:id="@+id/loginTvCorreo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
             android:textColor="@color/gris"
-            android:textSize="32dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:text="@string/loginTvTitulo"
+            android:text="@string/loginTvCorreo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/loginTilEmail"
             />
-
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/loginTilEmail"
@@ -56,11 +63,11 @@
             android:layout_marginHorizontal="20dp"
             android:hint="@string/loginTilEmailHint"
             app:endIconMode="clear_text"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginTvLayout"
-            app:layout_constraintBottom_toTopOf="@id/loginTilPassword"
+            app:layout_constraintTop_toBottomOf="@+id/loginTvCorreo"
+            app:layout_constraintBottom_toTopOf="@id/loginTvContra"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -70,6 +77,22 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/loginTvContra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/gris"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="@string/loginTvContra"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginTilEmail"
+            app:layout_constraintBottom_toTopOf="@id/loginTilPassword"
+            />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/loginTilPassword"
             android:layout_width="match_parent"
@@ -77,11 +100,10 @@
             android:layout_marginHorizontal="20dp"
             android:hint="@string/loginTilPasswordHint"
             app:endIconMode="password_toggle"
-            android:layout_marginBottom="100dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginTilEmail"
-            app:layout_constraintBottom_toTopOf="@id/loginBtnAcceder"
+            app:layout_constraintTop_toBottomOf="@id/loginTvContra"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -91,6 +113,19 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginBoxBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBoxForm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
         <Button
             android:id="@+id/loginBtnAcceder"
             android:layout_width="match_parent"
@@ -100,10 +135,10 @@
             android:textSize="16dp"
             android:text="@string/loginBtnAcceder"
             android:layout_marginBottom="10dp"
-            app:cornerRadius="20dp"
+            app:cornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginTilPassword"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/loginTvNoTienesCuenta"
             />
         <TextView
@@ -135,11 +170,6 @@
             app:layout_constraintTop_toBottomOf="@id/loginBtnAcceder"
             app:layout_constraintBottom_toBottomOf="parent"
             />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
