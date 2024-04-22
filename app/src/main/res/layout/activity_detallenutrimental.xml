@@ -4,21 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".huerto.addhuerto.detallenutrimental.detallenutrimental"
-    android:background="@drawable/fondo">
+    tools:context=".huerto.addhuerto.detallenutrimental.detallenutrimental">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/detallenutrimentalToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
-        android:background="@drawable/white_rect_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/detallenutrimentalBoxLayout"
@@ -26,10 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="20dp"
-        android:background="@drawable/white_rect_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detallenutrimentalToolbar"
+        app:layout_constraintTop_toTopOf="parent"
         >
 
 
@@ -48,7 +36,7 @@
                 android:id="@+id/detallenutrimentalTvTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gris"
+                android:textColor="@color/dark2"
                 android:textSize="28dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -64,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="40dp"
-                android:textColor="@color/gris"
+                android:textColor="@color/dark2"
                 android:textSize="16dp"
                 android:textAlignment="center"
                 android:text="@string/detallenutrimentalTvInstruccionHint"
@@ -88,7 +76,8 @@
             app:layout_constraintTop_toBottomOf="@id/detallenutrimentalBoxTitle"
             >
 
-            <Button
+
+            <CheckBox
                 android:id="@+id/detallenutrimentalBtnNitrogeno"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -103,9 +92,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 />
-
-            <Button
-                android:id="@+id/detallenutrimentalBtnFosforo"
+            <CheckBox
+                android:id="@+id/detallenutrimentalCbFosforo"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginVertical="15dp"
@@ -120,7 +108,8 @@
                 app:layout_constraintTop_toBottomOf="@id/detallenutrimentalBtnNitrogeno"
                 />
 
-            <Button
+
+            <CheckBox
                 android:id="@+id/detallenutrimentalBtnPotasio"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -133,10 +122,11 @@
                 app:cornerRadius="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/detallenutrimentalBtnFosforo"
+                app:layout_constraintTop_toBottomOf="@id/detallenutrimentalCbFosforo"
                 />
 
-            <Button
+
+            <CheckBox
                 android:id="@+id/detallenutrimentalBtnMag"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -152,7 +142,8 @@
                 app:layout_constraintTop_toBottomOf="@id/detallenutrimentalBtnPotasio"
                 />
 
-            <Button
+
+            <CheckBox
                 android:id="@+id/detallenutrimentalBtnCalcio"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"

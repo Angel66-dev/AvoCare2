@@ -1,13 +1,12 @@
 package com.l20290957.avocare.pronostico;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.l20290957.avocare.R;
-import com.l20290957.avocare.plagas.mosquitablanca;
+
 
 public class pronostico extends AppCompatActivity {
 
@@ -23,8 +22,8 @@ public class pronostico extends AppCompatActivity {
 
         Button btnMBlanca = findViewById(R.id.pronosticoBtnMb);
         btnMBlanca.setOnClickListener(View -> {
-            Intent intent = new Intent(this, mosquitablanca.class);
-            startActivity(intent);
+           // Intent intent = new Intent(this, mosquitablanca.class);
+           // startActivity(intent);
         });
 
     }

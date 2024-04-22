@@ -2,6 +2,7 @@ package com.l20290957.avocare.huerto;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
@@ -32,6 +33,18 @@ private HuertosApi huertosApi;
         huertosApi = AvocadoCareApiClient.get_instance().create(HuertosApi.class);
         FloatingActionButton fabAdd = findViewById(R.id.mishuertosFab);
         fabAdd.setOnClickListener(view -> {
+            Intent intent = new Intent(this, AddHuerto.class);
+            startActivity(intent);
+        });
+
+        Button navHome = findViewById(R.id.mainNavHome);
+        navHome.setOnClickListener(view -> {
+            Intent intent = new Intent(this, AddHuerto.class);
+            startActivity(intent);
+        });
+
+        Button navDiagnostic = findViewById(R.id.mainNavDiagnostico);
+        navDiagnostic.setOnClickListener(view -> {
             Intent intent = new Intent(this, AddHuerto.class);
             startActivity(intent);
         });

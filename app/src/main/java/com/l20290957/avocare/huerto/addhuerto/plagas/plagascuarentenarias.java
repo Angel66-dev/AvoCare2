@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.l20290957.avocare.R;
-import com.l20290957.avocare.services.avocadoApi.api.AuthApi;
 import com.l20290957.avocare.services.avocadoApi.api.HuertosApi;
 import com.l20290957.avocare.services.avocadoApi.client.AvocadoCareApiClient;
 import com.l20290957.avocare.services.avocadoApi.models.Huertos.responses.CreateHuertos;
@@ -32,7 +31,6 @@ public class plagascuarentenarias extends AppCompatActivity {
     private TextInputLayout tipoRiego;
     private double latitudDouble=0, longitudDouble=0;
     private HuertosApi huertosApi;
-    private AuthApi authApi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
