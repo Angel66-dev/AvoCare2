@@ -1,13 +1,11 @@
 package com.l20290957.avocare.alertas;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.l20290957.avocare.R;
-import com.l20290957.avocare.plagas.trips;
 
 public class alerta extends AppCompatActivity {
 
@@ -23,8 +21,8 @@ public class alerta extends AppCompatActivity {
 
         Button btnTrips = findViewById(R.id.alertaBtnAlertTrips);
         btnTrips.setOnClickListener(View -> {
-            Intent intent = new Intent(this, trips.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this, trips.class);
+            //startActivity(intent);
         });
 
     }
