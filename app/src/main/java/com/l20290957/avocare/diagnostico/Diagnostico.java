@@ -12,7 +12,9 @@ import com.l20290957.avocare.R;
 public class Diagnostico extends AppCompatActivity {
 
     private CheckBox checkBoxAreaFruto, checkBoxAreaHoja, checkBoxAreaTallo, checkBoxAreaFlor;
-    private CheckBox checkBox1a, checkBox1b, checkBox2a, checkBox2b, checkBox3a, checkBox3b, checkBox4a, checkBox4b;
+
+    //agregas las id de todos los checkbox de fruto, hoja, tallo y flor
+    private CheckBox ;
     private TextView tvFruto, tvHoja, tvTallo, tvFlor;
 
     @Override
@@ -28,20 +30,16 @@ public class Diagnostico extends AppCompatActivity {
 
         // Grupo Fruto
         tvFruto = findViewById(R.id.seTVOpcFruto);
-        checkBox1a = findViewById(R.id.checkbox_1a);
-        checkBox1b = findViewById(R.id.checkbox_1b);
+
         // Grupo Hoja
         tvHoja = findViewById(R.id.seTVOpcHoja);
-        checkBox2a = findViewById(R.id.checkbox_2a);
-        checkBox2b = findViewById(R.id.checkbox_2b);
+
         // Grupo Tallo
         tvTallo = findViewById(R.id.seTVOpcTallo);
-        checkBox3a = findViewById(R.id.checkbox_3a);
-        checkBox3b = findViewById(R.id.checkbox_3b);
+
         // Grupo Flor
         tvFlor = findViewById(R.id.seTVOpcFlor);
-        checkBox4a = findViewById(R.id.checkbox_4a);
-        checkBox4b = findViewById(R.id.checkbox_4b);
+
 
         // Configurar oyentes de cambio de estado
         checkBoxAreaFruto.setOnCheckedChangeListener((buttonView, isChecked) -> updateCheckBoxVisibility());
@@ -49,65 +47,50 @@ public class Diagnostico extends AppCompatActivity {
         checkBoxAreaTallo.setOnCheckedChangeListener((buttonView, isChecked) -> updateCheckBoxVisibility());
         checkBoxAreaFlor.setOnCheckedChangeListener((buttonView, isChecked) -> updateCheckBoxVisibility());
 
+        // Establecemos todos los CheckBoxes como ocultos inicialmente
+        // hace invisible las opciones para que cuando selecciones ya sea fruto te aparezcan solo esas opciones
         tvFruto.setVisibility(View.GONE);
         tvHoja.setVisibility(View.GONE);
         tvTallo.setVisibility(View.GONE);
         tvFlor.setVisibility(View.GONE);
-        checkBox1a.setVisibility(View.GONE);
-        checkBox1b.setVisibility(View.GONE);
-        checkBox2a.setVisibility(View.GONE);
-        checkBox2b.setVisibility(View.GONE);
-        checkBox3a.setVisibility(View.GONE);
-        checkBox3b.setVisibility(View.GONE);
-        checkBox4a.setVisibility(View.GONE);
-        checkBox4b.setVisibility(View.GONE);
+
     }
 
     private void updateCheckBoxVisibility() {
-        // Establecemos todos los CheckBoxes como ocultos inicialmente
-
 
         // Verificamos cada conjunto de condiciones
+        // hara visibles las opciones de cada opcion principal
         if (checkBoxAreaFruto.isChecked()) {
             tvFruto.setVisibility(View.VISIBLE);
-            checkBox1a.setVisibility(View.VISIBLE);
-            checkBox1b.setVisibility(View.VISIBLE);
+
         } else {
             tvFruto.setVisibility(View.GONE);
-            checkBox1a.setVisibility(View.GONE);
-            checkBox1b.setVisibility(View.GONE);
+
         }
 
         if (checkBoxAreaHoja.isChecked()) {
             tvHoja.setVisibility(View.VISIBLE);
-            checkBox2a.setVisibility(View.VISIBLE);
-            checkBox2b.setVisibility(View.VISIBLE);
+
         }else {
             tvHoja.setVisibility(View.GONE);
-            checkBox2a.setVisibility(View.GONE);
-            checkBox2b.setVisibility(View.GONE);
+
         }
 
         if (checkBoxAreaTallo.isChecked()) {
             tvTallo.setVisibility(View.VISIBLE);
-            checkBox3a.setVisibility(View.VISIBLE);
-            checkBox3b.setVisibility(View.VISIBLE);
+
         } else {
             tvTallo.setVisibility(View.GONE);
-            checkBox3a.setVisibility(View.GONE);
-            checkBox3b.setVisibility(View.GONE);
+
         }
 
         if (checkBoxAreaFlor.isChecked()) {
             tvFlor.setVisibility(View.VISIBLE);
-            checkBox4a.setVisibility(View.VISIBLE);
-            checkBox4b.setVisibility(View.VISIBLE);
+
         }else {
             tvFlor.setVisibility(View.GONE);
-            checkBox4a.setVisibility(View.GONE);
-            checkBox4b.setVisibility(View.GONE);
+
         }
 
-        // Aquí puedes agregar más condiciones si necesitas mostrar otros CheckBoxes
     }
 }
