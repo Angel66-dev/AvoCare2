@@ -14,7 +14,7 @@ public class Diagnostico extends AppCompatActivity {
     private CheckBox checkBoxAreaFruto, checkBoxAreaHoja, checkBoxAreaTallo, checkBoxAreaFlor;
 
     //agregas las id de todos los checkbox de fruto, hoja, tallo y flor
-    private CheckBox ;
+    //private CheckBox ;
     private TextView tvFruto, tvHoja, tvTallo, tvFlor;
 
     @Override

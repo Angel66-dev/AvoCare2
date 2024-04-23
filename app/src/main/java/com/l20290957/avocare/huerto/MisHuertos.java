@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.l20290957.avocare.R;
+import com.l20290957.avocare.diagnostico.Diagnostico;
 import com.l20290957.avocare.huerto.addhuerto.AddHuerto;
 import com.l20290957.avocare.services.avocadoApi.api.HuertosApi;
 import com.l20290957.avocare.services.avocadoApi.client.AvocadoCareApiClient;
@@ -39,13 +40,13 @@ private HuertosApi huertosApi;
 
         Button navHome = findViewById(R.id.mainNavHome);
         navHome.setOnClickListener(view -> {
-            Intent intent = new Intent(this, AddHuerto.class);
+            Intent intent = new Intent(this, MisHuertos.class);
             startActivity(intent);
         });
 
         Button navDiagnostic = findViewById(R.id.mainNavDiagnostico);
         navDiagnostic.setOnClickListener(view -> {
-            Intent intent = new Intent(this, AddHuerto.class);
+            Intent intent = new Intent(this, Diagnostico.class);
             startActivity(intent);
         });
 
