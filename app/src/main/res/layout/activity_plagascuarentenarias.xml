@@ -4,21 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".huerto.addhuerto.plagas.plagascuarentenarias"
-    android:background="@drawable/fondo">
+    tools:context=".huerto.addhuerto.plagas.plagascuarentenarias">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/plagasCToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
-        android:background="@drawable/white_rect_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/plagasCBoxLayout"
@@ -26,10 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="20dp"
-        android:background="@drawable/white_rect_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/plagasCToolbar"
+        app:layout_constraintTop_toTopOf="parent"
         >
 
 
@@ -48,7 +36,7 @@
                 android:id="@+id/plagasCTvTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gris"
+                android:textColor="@color/dark2"
                 android:textSize="28dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -64,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="40dp"
-                android:textColor="@color/gris"
+                android:textColor="@color/dark2"
                 android:textSize="16dp"
                 android:textAlignment="center"
                 android:text="@string/plagasCTvInstruccion"
@@ -159,18 +147,12 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/plagasFab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="15dp"
-        android:clickable="true"
+    <Button
+        android:id="@+id/agregarHuerto2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/baseline_double_arrow_24"
-        tools:ignore="SpeakableTextPresentCheck">
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

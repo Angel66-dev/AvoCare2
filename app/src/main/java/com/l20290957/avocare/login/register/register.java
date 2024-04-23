@@ -89,7 +89,8 @@ public class register extends AppCompatActivity {
         register.setContra(contraValue);
         register.setNombre(userValue);
 
-        authApi.register( register ).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(this::onRegisterApiResponse,this::onRegisterError);
+        authApi.register( register ).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(
+                this::onRegisterApiResponse,this::onRegisterError);
 
     }
 

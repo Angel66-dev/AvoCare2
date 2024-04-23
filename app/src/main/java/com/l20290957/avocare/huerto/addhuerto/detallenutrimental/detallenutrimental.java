@@ -22,6 +22,7 @@ public class detallenutrimental extends AppCompatActivity {
         FloatingActionButton fabAdd = findViewById(R.id.detallenutrimentalFab);
         fabAdd.setOnClickListener(view -> {
             Intent intent = new Intent(this, plagascuarentenarias.class);
+            intent.putExtras(getIntent().getExtras());
             startActivity(intent);
         });
     }

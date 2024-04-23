@@ -4,20 +4,33 @@
     <string name="mainBtnLogin">Iniciar sesión</string>
     <string name="mainTvNoTienesCuenta">¿No tienes una cuenta?</string>
     <string name="mainTvCrearCuenta">Crear cuenta</string>
+    <string name="mainBtnResgister">Registrate</string>
+    <string name="mainNavHome">Inicio</string>
+    <string name="mainNavCamera">Camara</string>
+    <string name="mainNavDiagnostico">Diagnostico</string>
+
     <string name="loginTvTitulo">¡Bienvenido de nuevo!</string>
     <string name="loginTilEmailHint">Ingresa tu correo electronico</string>
     <string name="loginTilPasswordHint">Ingresa tu contraseña</string>
     <string name="loginBtnAcceder">Iniciar sesión</string>
     <string name="loginTvNoTienesCuenta">¿No tienes una cuenta?</string>
     <string name="loginTvCrearCuenta">Crear cuenta</string>
+    <string name="loginTvContra">Contraseña</string>
+    <string name="loginTvCorreo">Correo</string>
+
     <string name="registerTvTitulo">¡Hola! Registrate para comenzar</string>
-    <string name="registerTilUsernameHint">Usuario</string>
-    <string name="registerTilEmailHint">E-mail</string>
-    <string name="registerTilPasswordHint">Contraseña</string>
+    <string name="registerTvName">Nombre</string>
+    <string name="registerTilUsernameHint">Ingresa tu nombre</string>
+    <string name="registerTilEmailHint">IngresaE-mail</string>
+    <string name="registerTilPasswordHint">Ingresa una contraseña</string>
     <string name="registerTilConfirmPasswordHint">Confirmar contraseña</string>
     <string name="registerBtnAcceder">Registrar</string>
     <string name="registerTvNoTienesCuenta">¿Ya tienes una cuenta?</string>
     <string name="registerTvCrearCuenta">Iniciar sesión</string>
+    <string name="registerTvCorreo">Correo</string>
+    <string name="registerTvContra">Contraseña</string>
+    <string name="registerTvContraValue">Confirmar Contraseña</string>
+
     <string name="mishuertosTvTitulo">Tlaltec</string>
     <string name="mishuertosTvNomHuerto">Huerto Cerritos</string>
     <string name="mishuertosTvUbicacion">Cd. Guzman, Jal, Mex.</string>
@@ -29,6 +42,12 @@
     <string name="mishuertosTvPronostico">Alertas pronostico: </string>
     <string name="mishuertosTvNumAlertas">3</string>
     <string name="mishuertosTvNumPronosticos">3</string>
+    <string name="mishuertosTvHuertos">Huertos</string>
+    <string name="mishuertosAlertDialogBackTitle">¿Qué desea hacer?</string>
+    <string name="mishuertosAlertDialogMessage">Está a punto de abandonar esta pantalla Seleccione una opción</string>
+    <string name="mishuertosAlertDialogBackNegativeTitle">Cerrar Sesión</string>
+    <string name="mishuertosAlertDialogBackPositiveTitle">Cerrar App</string>
+
     <string name="saludhuertoTvSalud">Salud del Huerto</string>
     <string name="saludhuertoTvNomHuerto">Cerritos</string>
     <string name="saludhuertoBtnAlertEnfer">Alertas Enfermedades</string>
@@ -36,12 +55,20 @@
     <string name="saludhuertoBtnPron">Pronostico a 15 días</string>
     <string name="saludhuertoBtnPlan">Planeación</string>
     <string name="saludhuertoBtnImagenes">Visor de Imágenes</string>
+
     <string name="addhuertoBtnVariedad">Variedad</string>
     <string name="addhuertoBtnMerObj">Mercado Objetivo</string>
     <string name="addhuertoBtnRiego">Tipo de Riego</string>
     <string name="addhuertoBtnEtapa">Etapa Fenológica</string>
     <string name="addhuertoTvTitulo">Detalles del Huerto</string>
     <string name="addhuertoTvInstruccion">Proporciona la siguiente información de tu huerto:</string>
+    <string name="addhuertoEtName">Nombre del huerto</string>
+    <string name="addhuertoBtnTipoSuelo">Tipo de Suelo</string>
+    <string name="addhuertoBtnTipoRiego">Tipo de Riego</string>
+    <string name="addhuertoBtnLatitud">Latitud</string>
+    <string name="addhuertoBtnLongitud">Longitud</string>
+
+
     <string name="detallenutrimentalTvTitulo">Plagas Cuarentenarías</string>
     <string name="detallenutrimentalTvInstruccion">¿Cuál de las siguientes plagas has tenido presencia cercas de tu huerto?</string>
     <string name="detallenutrimentalBtnVariedad">Barrenador pequeño hueso</string>
@@ -49,48 +76,80 @@
     <string name="detallenutrimentalBtnBtr">Barrenador tronco y ramas</string>
     <string name="detallenutrimentalBtnBgh">Barrenador grande del hueso</string>
     <string name="detallenutrimentalBtnPba">Palomilla barrenadora del aguacate</string>
+    <string name="detallenutrimentalTvTituloHint">Detalle nutrimental</string>
+    <string name="detallenutrimentalTvInstruccionHint">¿Cuándo fue la última vez que fertilizaste con?:</string>
+    <string name="detallenutrimentalBtnNitrogeno">Nitrógeno</string>
+    <string name="detallenutrimentalBtnFosforo">Fósforo</string>
+    <string name="detallenutrimentalBtnPotasio">Potasio</string>
+    <string name="detallenutrimentalBtnMag">Magnesio</string>
+    <string name="detallenutrimentalBtnCalcio">Calcio</string>
+
     <string name="planeacionTvTitulo">Planeación</string>
     <string name="planeacionTvInstruccion">Actividades recomendadas</string>
+
     <string name="pronosticoTvTitulo">Pronostico</string>
     <string name="pronosticoTvInstruccion">Las condiciones dentro de 15 días serán propicias para:</string>
     <string name="pronosticoBtnMb">Mosquita blanca</string>
     <string name="pronosticoBtnGt">Gusano telarañero</string>
     <string name="pronosticoBtnAr">Acaro Rojo</string>
     <string name="pronosticoBtnAc">Acaro Cristalino</string>
+
     <string name="alertaTvTitulo">Alerta</string>
     <string name="alertaTvInstruccion">Las condiciones son propicias para:</string>
     <string name="alertaBtnAlertTrips">Trips</string>
     <string name="alertaBtnAranaRoja">Araña roja</string>
     <string name="alertaBtnAranaCris">Araña cristalina</string>
     <string name="alertaBtnBarrenador">Barrenador</string>
-    <string name="detallenutrimentalTvTituloHint">Detalle nutrimental</string>
-    <string name="detallenutrimentalTvInstruccionHint">¿Cuándo fue la última vez que fertilizaste con?:</string>
+
+
     <string name="plagasCTvTitulo">Plagas Cuarentenarías</string>
     <string name="plagasCTvInstruccion">¿Cuál de las siguientes plagas has tenido presencia cerca de tu huerto?</string>
     <string name="plagasCBtnBph">Barrenador pequeño hueso</string>
     <string name="plagasCBtnBtr">Barrenador tronco y ramas</string>
     <string name="plagasCBtnBgh">Barrenado grande del hueso</string>
     <string name="plagasCBtnPba">Palomilla barrenadora del aguacate</string>
-    <string name="detallenutrimentalBtnNitrogeno">Nitrógeno</string>
-    <string name="detallenutrimentalBtnFosforo">Fósforo</string>
-    <string name="detallenutrimentalBtnPotasio">Potasio</string>
-    <string name="detallenutrimentalBtnMag">Magnesio</string>
-    <string name="detallenutrimentalBtnCalcio">Calcio</string>
-    <string name="mishuertosAlertDialogBackTitle">¿Qué desea hacer?</string>
-    <string name="mishuertosAlertDialogMessage">Está a punto de abandonar esta pantalla Seleccione una opción</string>
-    <string name="mishuertosAlertDialogBackNegativeTitle">Cerrar Sesión</string>
-    <string name="mishuertosAlertDialogBackPositiveTitle">Cerrar App</string>
-    <string name="addhuertoEtName">Nombre del huerto</string>
-    <string name="addhuertoBtnTipoSuelo">Tipo de Suelo</string>
-    <string name="addhuertoBtnTipoRiego">Tipo de Riego</string>
+
     <string name="detallehuertoBtnOrganico">Organico</string>
-    <string name="addhuertoBtnLatitud">Latitud</string>
-    <string name="addhuertoBtnLongitud">Longitud</string>
-    <string name="loginTvContra">Contraseña</string>
-    <string name="loginTvCorreo">Correo</string>
-    <string name="mainBtnResgister">Registrate</string>
-    <string name="mainNavHome">Inicio</string>
-    <string name="mainNavCamera">Camara</string>
-    <string name="mainNavDiagnostico">Diagnostico</string>
-    <string name="mishuertosTvHuertos">Huertos</string>
+    <string name="detallehuertoBtnMerObj">Agregar mercado objetivo</string>
+    <string name="detallehuertoTvMerObj">mercado Objetivo</string>
+    <string name="detallehuertoBtnVariedad">Agregar Variedad</string>
+    <string name="detallehuertoTvVariedad">Variedad</string>
+
+    <string name="spinner_prompt_infestacion">Infestación</string>
+    <string name="spinner_prompt_etapa_fenologica">Etapa fenológica</string>
+    <string name="spinner_prompt_mercado_objetivo">Mercado objetivo</string>
+    <string name="spinner_prompt_organico">Orgánico</string>
+
+    <string name="gravedadInfestacion">Infestacion</string>
+    <string name="gravedadEtapaFeno">Etapa fenológica</string>
+    <string name="gravedadMerObj">Mercado Objetivo</string>
+    <string name="gravedadOrg">Orgánico</string>
+
+
+    <string-array name="opciones_infestacion">
+        <item>Seleccione aquí</item>
+        <item>Bajo</item>
+        <item>Medio</item>
+        <item>Alto</item>
+    </string-array>
+    <string-array name="opciones_etapa_fenologica">
+        <item>Seleccione aquí</item>
+        <item>Fructificación</item>
+        <item>Floración</item>
+        <item>Cosecha</item>
+        <item>Flujo vegetativo</item>
+    </string-array>
+    <string-array name="opciones_mercado_objetivo">
+        <item>Seleccione aquí</item>
+        <item>Nacional</item>
+        <item>USA</item>
+        <item>Europa</item>
+        <item>Asia</item>
+    </string-array>
+    <string-array name="opciones_organico">
+        <item>Seleccione aquí</item>
+        <item>Sí</item>
+        <item>No</item>
+    </string-array>
+
 </resources>

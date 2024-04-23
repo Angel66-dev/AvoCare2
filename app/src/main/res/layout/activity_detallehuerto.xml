@@ -5,20 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".huerto.addhuerto.detallehuerto.DetalleHuerto"
-    android:background="@drawable/fondo">
+    >
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/detallehuertoToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
-        android:background="@drawable/white_rect_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/detallehuertoBoxLayout"
@@ -26,10 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="20dp"
-        android:background="@drawable/white_rect_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detallehuertoToolbar"
+        app:layout_constraintTop_toTopOf="parent"
         >
 
 
@@ -48,7 +37,7 @@
                 android:id="@+id/detallehuertoTvTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gris"
+                android:textColor="@color/dark2"
                 android:textSize="28dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -64,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="40dp"
-                android:textColor="@color/gris"
+                android:textColor="@color/dark2"
                 android:textSize="16dp"
                 android:textAlignment="center"
                 android:text="@string/addhuertoTvInstruccion"
@@ -88,18 +77,29 @@
             app:layout_constraintTop_toBottomOf="@id/detallehuertoBoxTitle"
             >
 
+            <TextView
+                android:id="@+id/detallehuertoTvVariedad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detallehuertoTvVariedad"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/detallehuertoBtnVariedad"
+                />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/detallehuertoBtnVariedad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:hint="@string/addhuertoBtnVariedad"
+                android:hint="@string/detallehuertoBtnVariedad"
                 app:endIconMode="clear_text"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/detallehuertoBtnMerObj"
+                app:layout_constraintTop_toBottomOf="@id/detallehuertoTvVariedad"
+                app:layout_constraintBottom_toTopOf="@id/detallehuertoTvMerObj"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -108,19 +108,30 @@
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/detallehuertoTvMerObj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detallehuertoTvMerObj"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detallehuertoBtnVariedad"
+                app:layout_constraintBottom_toTopOf="@id/detallehuertoBtnMerObj"
+                />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/detallehuertoBtnMerObj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:hint="@string/addhuertoBtnMerObj"
+                android:hint="@string/detallehuertoBtnMerObj"
                 app:endIconMode="clear_text"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detallehuertoBtnVariedad"
-                app:layout_constraintBottom_toTopOf="@id/detallehuertoBtnOrganico"
+                app:layout_constraintTop_toBottomOf="@+id/detallehuertoTvMerObj"
+                app:layout_constraintBottom_toTopOf="@id/detallehuertoTvOrganico"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -129,6 +140,17 @@
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/detallehuertoTvOrganico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detallehuertoBtnOrganico"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detallehuertoBtnMerObj"
+                app:layout_constraintBottom_toTopOf="@id/detallehuertoBtnOrganico"
+                />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/detallehuertoBtnOrganico"
@@ -140,8 +162,8 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detallehuertoBtnMerObj"
-                app:layout_constraintBottom_toTopOf="@id/detallehuertoBtnEtapa"
+                app:layout_constraintTop_toBottomOf="@+id/detallehuertoTvOrganico"
+                app:layout_constraintBottom_toTopOf="@id/detallehuertoTvEtapa"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -150,6 +172,17 @@
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/detallehuertoTvEtapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addhuertoBtnEtapa"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detallehuertoBtnOrganico"
+                app:layout_constraintBottom_toTopOf="@id/detallehuertoBtnEtapa"
+                />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/detallehuertoBtnEtapa"
@@ -161,7 +194,7 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detallehuertoBtnOrganico"
+                app:layout_constraintTop_toBottomOf="@+id/detallehuertoTvEtapa"
                 app:layout_constraintBottom_toBottomOf="parent"
                 >
                 <com.google.android.material.textfield.TextInputEditText
