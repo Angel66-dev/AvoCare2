@@ -40,8 +40,8 @@ private HuertosApi huertosApi;
 
         Button navHome = findViewById(R.id.mainNavHome);
         navHome.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MisHuertos.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this, MisHuertos.class);
+            //startActivity(intent);
         });
 
         Button navDiagnostic = findViewById(R.id.mainNavDiagnostico);

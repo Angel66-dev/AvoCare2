@@ -18,7 +18,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/seIvBack"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -33,10 +33,6 @@
                 android:id="@+id/seBody"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/seFruto"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 >
 
                 <TextView
@@ -49,11 +45,12 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/frutoHoja"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seTVAreaAfec"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/talloFlor">
@@ -80,11 +77,12 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/talloFlor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/seTVAreaAfec"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/frutoHoja"
                 app:layout_constraintEnd_toEndOf="parent">
@@ -119,8 +117,6 @@
                 android:id="@+id/seFruto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@id/seHoja"
-                app:layout_constraintTop_toBottomOf="@id/seBody"
                 >
 
                 <TextView
@@ -134,275 +130,269 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/seOpc1Opc14"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/seOpc1Opc14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/seTVOpcFruto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seTVOpcFruto">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLesionesMedialuna"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/seOpc15Opc27"
+                        android:text="Lesiones en forma \nde medialuna"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxSudoracion"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/seTVOpcFruto"
-                        >
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxLesionesMedialuna"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lesiones en forma de medialuna"
-
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxSudoracion"
-                            app:layout_constraintStart_toStartOf="parent"
-                            />
-
-                        <CheckBox
-                            android:id="@+id/checkBoxSudoracion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sudoración"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxLesionesMedialuna"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxPerforaciones"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxPerforaciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Perforaciones"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxSudoracion"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxLarvas"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxLarvas"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Larvas"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxPerforaciones"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxAborto"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxAborto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Aborto"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxLarvas"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxSecrecionBlanca"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxSecrecionBlanca"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Secreción blanca"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxAborto"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxManchasBlancas"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxManchasBlancas"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Manchas blancas"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxSecrecionBlanca"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxResiduosPerforaciones"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxResiduosPerforaciones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Residuos en perforaciones"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxManchasBlancas"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxProtuberancias"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxProtuberancias"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Protuberancias"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxResiduosPerforaciones"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxLaceracion"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxLaceracion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Laceración"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxProtuberancias"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxDeformacion"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxDeformacion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Deformación"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxLaceracion"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxRugosidad"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxRugosidad"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Rugosidad"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxDeformacion"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxColorRojizo"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxColorRojizo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Color rojizo"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxRugosidad"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxTelaranas"
-                            app:layout_constraintStart_toStartOf="parent"/>
-
-                        <CheckBox
-                            android:id="@+id/checkBoxTelaranas"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Telarañas"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxColorRojizo"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/seOpc15Opc27"
+                    <CheckBox
+                        android:id="@+id/checkBoxSudoracion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toBottomOf="@id/seTVOpcFruto"
-                        android:layout_marginTop="10dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="seOpc1Opc14"
+                        android:text="Sudoración"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxPerforaciones"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxLesionesMedialuna" />
 
-                        >
+                    <CheckBox
+                        android:id="@+id/checkBoxPerforaciones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perforaciones"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxLarvas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxSudoracion" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxRoen"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Roen (Consumida)"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxGusano"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxLarvas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Larvas"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxAborto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxPerforaciones" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxGusano"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Gusano Amarillo / Verde"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxRoen"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxHormigueros"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxAborto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aborto"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxSecrecionBlanca"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxLarvas" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxHormigueros"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hormigueros"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxGusano"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxManchasOscuras"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxSecrecionBlanca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Secreción blanca"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxManchasBlancas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxAborto" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxManchasOscuras"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Manchas oscuras"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxHormigueros"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxDecoloracion"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxManchasBlancas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manchas blancas"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxResiduosPerforaciones"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxSecrecionBlanca" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxDecoloracion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Decoloración"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxManchasOscuras"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxMuerte"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxResiduosPerforaciones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Residuos \nen perforaciones"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxProtuberancias"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxManchasBlancas" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxMuerte"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Muerte"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxDecoloracion"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxDisminucionProduccion"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxProtuberancias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Protuberancias"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxLaceracion"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxResiduosPerforaciones" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxDisminucionProduccion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Disminución de la producción"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxMuerte"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxRecubrimientoNegro"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxLaceracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laceración"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxDeformacion"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxProtuberancias" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxRecubrimientoNegro"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Recubrimiento negro"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxDisminucionProduccion"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxPolvo"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxDeformacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deformación"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxRugosidad"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxLaceracion" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxPolvo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Polvo"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxRecubrimientoNegro"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxLesiones"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxRugosidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rugosidad"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxColorRojizo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxDeformacion" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxLesiones"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lesiones"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxPolvo"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxMarchitez"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxColorRojizo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Color rojizo"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxTelaranas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxRugosidad" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxMarchitez"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Marchitez"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxLesiones"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxColorAmarillento"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                    <CheckBox
+                        android:id="@+id/checkBoxTelaranas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telarañas"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxColorRojizo" />
 
-                        <CheckBox
-                            android:id="@+id/checkBoxColorAmarillento"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Color amarillento"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxMarchitez"
-                            app:layout_constraintBottom_toTopOf="@id/checkBoxDanoPedunculo"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <CheckBox
-                            android:id="@+id/checkBoxDanoPedunculo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Daño en pedúnculo"
-                            app:layout_constraintTop_toBottomOf="@id/checkBoxColorAmarillento"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/seOpc15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/seTVOpcFruto"
+                    app:layout_constraintTop_toTopOf="@id/seOpc1Opc14">
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <CheckBox
+                        android:id="@+id/checkBoxRoen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roen (Consumida)"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxGusano"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxGusano"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gusano Amarillo \no Verde"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxHormigueros"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxRoen" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxHormigueros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hormigueros"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxManchasOscuras"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxGusano" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxManchasOscuras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manchas oscuras"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxDecoloracion"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxHormigueros" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxDecoloracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Decoloración"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxMuerte"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxManchasOscuras" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxMuerte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Muerte"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxDisminucionProduccion"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxDecoloracion" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxDisminucionProduccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Disminución de la \nproducción"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxRecubrimientoNegro"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxMuerte" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxRecubrimientoNegro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recubrimiento negro"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxPolvo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxDisminucionProduccion" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPolvo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Polvo"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxLesiones"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxRecubrimientoNegro" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLesiones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lesiones"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxMarchitez"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxPolvo" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxMarchitez"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marchitez"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxColorAmarillento"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxLesiones" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxColorAmarillento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Color amarillento"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxDanoPedunculo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxMarchitez" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxDanoPedunculo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daño en pedúnculo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxColorAmarillento" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -411,117 +401,214 @@
                 android:id="@+id/seHoja"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@id/seBody"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/seFruto"
                 >
-                <!-- Grupo 2 de CheckBox -->
+
                 <TextView
                     android:id="@+id/seTVOpcHoja"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Grupo 2"
-                    app:layout_constraintBottom_toTopOf="@id/checkbox_2a"
+                    android:text="Hoja"
+                    app:layout_constraintBottom_toTopOf="@id/seOpc1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <CheckBox
-                    android:id="@+id/checkbox_2a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Opción 1"
-                    app:layout_constraintBottom_toTopOf="@id/checkbox_2b"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/seTVOpcHoja" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/seOpc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/seTVOpcHoja"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
 
-                <CheckBox
-                    android:id="@+id/checkbox_2b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Opción 2"
-                    app:layout_constraintBottom_toTopOf="@id/seTVOpcTallo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkbox_2a" />
+                    <CheckBox
+                        android:id="@+id/checkBoxPuntosVerdeClaroOscuroh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Puntos de color \nverde claro a oscuro"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxPresenciaEscarabajoh"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxPresenciaEscarabajoh" />
 
-                <!-- Grupo 3 de CheckBox -->
-                <TextView
-                    android:id="@+id/seTVOpcTallo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Grupo 3"
-                    app:layout_constraintBottom_toTopOf="@id/checkbox_3a"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkbox_2b" />
+                    <CheckBox
+                        android:id="@+id/checkBoxPresenciaEscarabajoh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Presencia escarabajo"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxManchash"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxPuntosVerdeClaroOscuroh" />
 
-                <CheckBox
-                    android:id="@+id/checkbox_3a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Opción 1"
-                    app:layout_constraintBottom_toTopOf="@id/checkbox_3b"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/seTVOpcTallo" />
+                    <CheckBox
+                        android:id="@+id/checkBoxManchash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manchas"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxPresenciaEscarabajoh"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxRetorcimientoh"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
 
-                <CheckBox
-                    android:id="@+id/checkbox_3b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Opción 2"
-                    app:layout_constraintBottom_toTopOf="@id/seTVOpcFlor"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkbox_3a" />
+                    <CheckBox
+                        android:id="@+id/checkBoxRetorcimientoh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retorcimiento"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxManchash"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxDeformacionh"
+                        app:layout_constraintStart_toStartOf="parent"/>
 
-                <!-- Grupo 4 de CheckBox -->
-                <TextView
-                    android:id="@+id/seTVOpcFlor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Grupo 4"
-                    app:layout_constraintBottom_toTopOf="@id/checkbox_4a"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkbox_3b" />
+                    <CheckBox
+                        android:id="@+id/checkBoxDeformacionh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deformación"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxRetorcimientoh"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxDefoliacionh"
+                        app:layout_constraintStart_toStartOf="parent"/>
 
-                <CheckBox
-                    android:id="@+id/checkbox_4a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Opción 1"
-                    app:layout_constraintBottom_toTopOf="@id/checkbox_4b"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/seTVOpcFlor" />
+                    <CheckBox
+                        android:id="@+id/checkBoxDefoliacionh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Defoliación"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxDeformacionh"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxDecoloracionh"
+                        app:layout_constraintStart_toStartOf="parent"/>
 
-                <CheckBox
-                    android:id="@+id/checkbox_4b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Opción 2"
-                    app:layout_constraintBottom_toTopOf="@id/btnNavigate"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkbox_4a" />
-                <!-- Aquí continuarías con el resto de tus CheckBoxes de los Grupos 2, 3 y 4 -->
+                    <CheckBox
+                        android:id="@+id/checkBoxDecoloracionh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Decoloración"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxDefoliacionh"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
 
-                <Button
-                    android:id="@+id/btnNavigate"
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/seOpc8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DIAGNOSTICAR"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkbox_4b" />
+                    app:layout_constraintStart_toStartOf="@id/seTVOpcHoja"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/checkBoxQuebradizash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quebradizas"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxColorRojizoh"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxColorRojizoh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Color rojizo"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxQuebradizash"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxTelaranash"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxTelaranash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telarañas"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxColorRojizoh"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxRoenh"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxRoenh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roen (Consumida)"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxTelaranash"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxGusanoAmarilloVerdeh"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxGusanoAmarilloVerdeh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gusano Amarillo \no Verde"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxRoenh"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxMarchitezh"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxMarchitezh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marchitez"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxGusanoAmarilloVerdeh"
+                        app:layout_constraintBottom_toTopOf="@id/checkBoxRecubrimientoNegroPolvorientoh"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBoxRecubrimientoNegroPolvorientoh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recubrimiento negro \ny polvoriento"
+                        app:layout_constraintTop_toBottomOf="@id/checkBoxMarchitezh"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/seTalloTronco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/seTVOpcTalloTronco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tallo / Tronco"
+                    app:layout_constraintBottom_toTopOf="@id/seOpc1Tallo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/seOpc1Tallo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/seTVOpcHoja"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/btnNavigate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siguiente"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
         </LinearLayout>
     </ScrollView>
 
